@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "G8nKXq5e9D6rzZ+9HRQAmIPgaTnxyoxphYckKf4l7xnb9776+9Ohx8m3oHCMlqteppacxHwncmOzYFOZm2v4NQ==",
+  "dgSpecHash": "+Gi1WzL6dyO6xlWuabXo/flBG83wNiylaV7I7Zh54oIt/BU4hFwfVyJv9DbZfw0x6ulE43gMmLB57Y4EnXFS1Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Maksd\\source\\repos\\WebApplication2\\WebApplication2\\Password_Keep.csproj",
+  "projectFilePath": "C:\\Users\\Maksd\\source\\repos\\Password_Keep_Project\\Password_Keep\\Password_Keep.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Maksd\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Maksd\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\5.0.17\\microsoft.aspnetcore.cryptography.internal.5.0.17.nupkg.sha512",
