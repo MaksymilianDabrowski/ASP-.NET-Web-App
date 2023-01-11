@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Password_Keep.Models.PasswordModel>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Your saved passwords</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.PlatformName)
+            </th>
+            <th>
+                <a asp-action="AddOrEdit" class="btn btn-sm btn-success offset-8">
+                    <i class="fa-solid fa-plus"></i>
+                    Add new
+                    </a>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PlatformName)
+            </td>
+            <td class="col-md-5 ">
+                <a asp-action="Edit" class="btn btn-secondary btn-sm" asp-route-id="@item.PasswordId">
+                <i class="fa-solid fa-pen-to-square"></i> Edit </a> |
+                    <a asp-action="Details" class="btn btn-secondary btn-sm" asp-route-id="@item.PasswordId">
+                        <i class="fa-solid fa-circle-info"></i> Details</a> |
+                    <a asp-action="Delete" class="btn btn-secondary btn-sm" asp-route-id="@item.PasswordId">
+                        <i class="fa-solid fa-trash"></i> Delete </a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

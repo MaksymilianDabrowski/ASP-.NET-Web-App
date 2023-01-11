@@ -1,0 +1,44 @@
+﻿@model Password_Keep.Models.PasswordModel
+
+@{
+    ViewData["Title"] = "Create";
+     Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<div class="row">
+    <div class="col-md-5 offset-md-3">
+        <h2>Password Storage</h2>
+        <hr>
+        <form asp-action="AddOrEdit" autocomplete="off">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="PlatformName" class="control-label"></label>
+                <input asp-for="PlatformName" class="form-control" />
+                <span asp-validation-for="PlatformName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StoredPassword" class="control-label"></label>
+                <input asp-for="StoredPassword" class="form-control" />
+                <span asp-validation-for="StoredPassword" class="text-danger"></span>
+            </div>
+           
+            <div class="row mt-2">
+                <div class="col-md-6">
+					<div class="form-group">
+						<input type="submit" value="Submit" class="btn btn-primary w-100" />
+					</div>
+                </div>
+                <div class="col-md-6">
+                    <a asp-action="Index" class="btn btn-secondary w-100">Back to List</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
